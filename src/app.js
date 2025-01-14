@@ -6,7 +6,7 @@ import morgan from "morgan";
 const app = new express();
 
 const corsOptions = {
-  origin: 'https://your-frontend-domain.com', // Replace with your frontend's URL
+  origin: 'https://fen-frontend.vercel.app', // Replace with your frontend's URL
   credentials: true, // Allow credentials
 };
 
