@@ -5,12 +5,12 @@ import morgan from "morgan";
 
 const app = new express();
 
-app.use(
-    cors({
-        origin: process.env.CORS_ORIGIN,
-        credentials: true,
-    })
-);
+const corsOptions = {
+  origin: 'https://your-frontend-domain.com', // Replace with your frontend's URL
+  credentials: true, // Allow credentials
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
